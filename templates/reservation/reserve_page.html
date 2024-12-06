@@ -1,0 +1,51 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+{% block title %}Reseve Page{% endblock title %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <div class="res_container">
+        <h1>رزرو وقت دکتر</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>دکتر</th>
+                <th>روز</th>
+                <th>ساعت</th>
+                <th>تاریخ</th>
+                <th>عملیات</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for res in  reserve %}
+
+
+
+                <tr>
+                    <td>{{ res.user.user.get_full_name }}</td>
+                    <td>{{ res.day_of_week }}</td>
+                    <td>{{ res.hour }}</td>
+                    <td>{{ res.date }}</td>
+                    {% if res.is_booked == False %}
+                        <td>
+                            <a href="{% url 'verifi' res.pk %}" class="res_btn">رزرو</a>
+                        </td>
+                    {% else %}
+                        <td>
+                            پرشده
+                        </td>
+                    {% endif %}
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock content %}

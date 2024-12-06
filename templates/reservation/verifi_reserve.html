@@ -1,0 +1,16 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+{% block title %}Verifi Reserve{% endblock title %}
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ reserve.hour }}</p>
+        <p>{{ reserve.day_of_week }}</p>
+        <p>{{ reserve.user }}</p>
+        <p>{{ reserve.date }}</p>
+        <button type="submit">تایید</button>
+
+    </form>
+{% endblock content %}

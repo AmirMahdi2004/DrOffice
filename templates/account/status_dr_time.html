@@ -1,0 +1,48 @@
+{% extends 'parent/base.html' %}
+
+{% block title %}پروفایل دکتر {% endblock title %}
+{% block content %}
+    <div class="ind_v_container">
+        <div class="ind_container">
+            <table>
+                <thead>
+                <tr>
+                    <th>نام بیمار</th>
+                    <th>روز</th>
+                    <th>ساعت</th>
+                    <th>تاریخ</th>
+                    <th>وضعیت</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for time in time_dr %}
+                    <tr>
+                    {% if  time.is_booked == True %}
+                        <td>{{ time.sick_name }}</td>
+                        
+                    {% else %}
+                        <td>شخصی رزو نکرده </td>
+                    {% endif %}
+                        <td>{{ time.day_of_week }}</td>
+                        <td>{{ time.hour }}</td>
+                        <td>{{ time.date }}</td>
+                        {% if  time.is_booked == True %}
+
+
+                            <td>پر است</td>
+                        {% else %}
+
+                            <td>خالی</td>
+
+                        {% endif %}
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <a href="{% url 'profile_dr' %}">باز گشت</a>
+        </div>
+    </div>
+{% endblock content %}

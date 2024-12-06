@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docto Office | {% block title %}{% endblock title %}</title>
+    {% block link %}
+        <link href="{% static 'css/css.css' %}" type="text/css" rel="stylesheet">{% endblock link %}
+</head>
+<body>
+{% include 'partials/navigation.html' %}
+{% include 'partials/header.html' %}
+{% block content %}{% endblock content %}
+{% include 'partials/footer.html' %}
+</body>
+</html>

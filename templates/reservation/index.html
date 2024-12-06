@@ -1,0 +1,14 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <div class="ind_v_container">
+    <div class="ind_container">
+        <h1> خوش آمدید!</h1>
+        <p>لطفاً به عنوان یکی از گزینه‌های زیر ثبت‌نام کنید:</p>
+        <a class="ind_a" href="{% url 'register_dr' %}">ثبت نام به عنوان دکتر</a>
+        <a class="ind_a" href="{% url 'register_user' %}">ثبت نام به عنوان بیمار</a>
+    </div>
+    </div>
+{% endblock content %}

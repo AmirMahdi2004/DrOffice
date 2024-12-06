@@ -1,0 +1,16 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+{% block title %}create teme dr{% endblock title %}
+{% block content %}
+    <div class="ind_v_container">
+        <div class="ind_container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <br>
+                <button class="btn" type="submit">ثبت</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

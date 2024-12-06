@@ -1,0 +1,18 @@
+<nav class="nav_navbar">
+    <div class="nav_container">
+        <a href="{% url 'reservation' %}" class="nav_logo">رزور دکتر</a>
+        <ul class="nav-links">
+            <li><a href="{% url 'index' %}">خانه</a></li>
+            <li><a href="{% url 'register_dr' %}">ثبت نام دکتر</a></li>
+            <li><a href="{% url 'register_user' %}">ثبت نام کاربر</a></li>
+            <li><a href="{% url 'login' %}">ورود</a></li>
+            {% if request.user.user_type == 1 %}
+                <li><a href="{% url 'profile_dr' %}">پروفایل دکتر</a></li>
+                <li><a href="{% url 'create_reservation' %}">ساخت وقت دکتر</a></li>
+            {% else %}
+                <li><a href="{% url 'profile_user' %}">پروفایل کاربر</a></li>
+            {% endif %}
+
+        </ul>
+    </div>
+</nav>

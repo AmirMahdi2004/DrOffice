@@ -1,0 +1,28 @@
+{% extends 'parent/base.html' %}
+{% block title %}ورود{% endblock title %}
+{% block content %}
+    <div class="container">
+
+        <div class="ind_v_container">
+            <div class="ind_container">
+                <h1>ورود به حساب کاربری</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="national_code"> کد ملی :</label>
+                    <input type="text" id="national_code" name="national_code" required>
+                    <br>
+                    <br>
+                    <label for="password">گذرواژه:</label>
+                    <input type="password" id="password" name="password" required>
+                    {#        {{ form.as_p }}#}
+                    <br>
+                    <br>
+                    <button class="btn" type="submit">ثبت</button>
+                </form>
+                <p>حساب کاربری ندارید؟</p>
+                <p><a href="{% url 'register_dr' %}">ثبت نام دکتر</a></p>
+                <p><a href="{% url 'register_user' %}">ثبت نام کاربر</a></p>
+
+            </div>
+        </div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'parent/base.html' %}
+
+{% block title %}پروفایل دکتر {% endblock title %}
+{% block content %}
+    <div class="ind_v_container">
+        <div class="ind_container">
+            <table>
+                <thead>
+                <tr>
+                    <th>نام دکتر</th>
+                    <th>روز</th>
+                    <th>ساعت</th>
+                    <th>تاریخ</th>
+                    <th>ادرس</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for time in time_sick %}
+                    <tr>
+                    <td>{{ time.user }}</td>
+                    <td>{{ time.day_of_week }}</td>
+                    <td>{{ time.hour }}</td>
+                    <td>{{ time.date }}</td>
+                    <td>{{ time.user.address }}</td>
+                {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <a href="{% url 'profile_user' %}">باز گشت</a>
+        </div>
+    </div>
+{% endblock content %}

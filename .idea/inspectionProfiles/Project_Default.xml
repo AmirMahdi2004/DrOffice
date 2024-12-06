@@ -1,0 +1,54 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CssUnknownProperty" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myCustomPropertiesEnabled" value="true" />
+      <option name="myIgnoreVendorSpecificProperties" value="false" />
+      <option name="myCustomPropertiesList">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="user-select" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="12">
+            <item index="0" class="java.lang.String" itemvalue="x-transition:enter" />
+            <item index="1" class="java.lang.String" itemvalue="x-transition:enter-start" />
+            <item index="2" class="java.lang.String" itemvalue="x-transition:enter-end" />
+            <item index="3" class="java.lang.String" itemvalue="x-transition:leave" />
+            <item index="4" class="java.lang.String" itemvalue="x-transition:leave-start" />
+            <item index="5" class="java.lang.String" itemvalue="x-transition:leave-end" />
+            <item index="6" class="java.lang.String" itemvalue="x-show" />
+            <item index="7" class="java.lang.String" itemvalue="@mouseenter" />
+            <item index="8" class="java.lang.String" itemvalue="@mouseleave" />
+            <item index="9" class="java.lang.String" itemvalue="x-data" />
+            <item index="10" class="java.lang.String" itemvalue="@click.away" />
+            <item index="11" class="java.lang.String" itemvalue="@click.prevent" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="separator_second_circle" />
+            <item index="7" class="java.lang.String" itemvalue="div" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

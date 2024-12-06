@@ -1,0 +1,21 @@
+{% extends 'parent/base.html' %}
+{% load static %}
+
+{% block title %}ثبت نام کاربر{% endblock title %}
+{% block content %}
+    <div class="ind_v_container">
+        <div class="ind_container">
+            <h1>ثبت نام کاربر </h1>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <br>
+                <button class="btn" type="submit">ثبت نام</button>
+            </form>
+            <p>هم‌اکنون عضو هستید؟ <a href="{% url 'login' %}">به حساب کاربری وارد شوید</a></p>
+
+        </div>
+    </div>
+{% endblock content %}
+

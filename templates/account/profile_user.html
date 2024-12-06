@@ -1,0 +1,28 @@
+{% extends 'parent/base.html' %}
+{% block title %}پرو فایل یوزر{% endblock title %}
+{% block content %}
+    <div class="pr_container">
+        <div class="pr_sidebar">
+            <h2>پنل کاربری</h2>
+            <ul>
+                <li><a href="{% url 'logout' %}">خروج</a></li>
+            </ul>
+        </div>
+        <div class="pr_content">
+            <h1>خوش آمدید، {{ user.get_full_name }}</h1>
+            <a href="{% url 'status' %}">اینجا می‌توانید به اطلاعات دکتران و نوبت‌های ملاقات دسترسی داشته باشید.</a>
+
+        </div>
+
+    </div>
+    <div class="pr_file_container">
+        <div class="pr_file">
+            <p><strong>شماره همراه : </strong>{{ user.phone_number }}</p>
+            <p><strong>کد ملی : </strong>{{ user.national_code }}</p>
+            {#            <a href="{% url 'edit_dr' %}">ویرایش </a>#}
+        </div>
+    </div>
+    <div class="pr_img">
+{#        <img src="{{ user_sick.profile_pic.url }}">#}
+    </div>
+{% endblock content %}
